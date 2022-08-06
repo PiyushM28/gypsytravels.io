@@ -588,8 +588,9 @@ header .search-bar-container label:hover {
 }
 
 .review .box img {
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+    width: 12rem;
+    border: 2px solid var(--secondary);
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
