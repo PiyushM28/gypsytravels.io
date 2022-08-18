@@ -8,14 +8,16 @@
 
     <title>Gypsy Travel website</title>
 
+    <!--Swiper CSS-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <!--Custom Stlye CSS-->
     <link rel="stylesheet" href="css/style.css">
 
+    <!--Font Awesome CDN-->
     <script src="https://kit.fontawesome.com/6e18e6ef68.js" crossorigin="anonymous"></script>
 
+    <!--AOS CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
 </head>
@@ -35,14 +37,13 @@
         <a href="#" class="logo"><img src="images/gypsy circle.png"></a>
 
         <nav class="navbar">
-            <a href="#home">Home</a>
+            <a class="active" href="#home">Home</a>
             <a href="#book">Book</a>
             <a href="#packages">Packages</a>
             <a href="#services">Services</a>
             <a href="#gallery">Gallery</a>
             <a href="#review">Review</a>
             <a href="#contact">Contact Us</a>
-
         </nav>
 
         <div class="icons">
@@ -609,10 +610,12 @@
 
 
 
-
+ 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- js Script -->
+
+    <!--Dark Mode-->
     <script>
 
         var theme = document.getElementById("theme");
@@ -627,6 +630,8 @@
         }
 
     </script>
+
+    <!--SMTP Server-->
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script>
@@ -649,7 +654,11 @@
         }
     </script>
 
+    <!--Custom JS-->
+
     <script src="js/script.js"></script>
+
+    <!--PreLoader-->
 
     <script>
 
@@ -661,6 +670,8 @@
 
     </script>
 
+    <!--AOS PageScroll Effects-->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"> </script>
 
     <script>
@@ -670,6 +681,34 @@
             delay: 400
         });
     </script>
+
+
+    <!--ScrollSpy-->
+
+<script>
+
+    let section = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('header nav a');
+
+    window.onscroll = () =>{
+
+        section.forEach(sec=>{
+
+            let top = window.scrollY;
+            let offset = sec.offsetTop - 180;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute('id');
+
+            if(top >= offset && top < offset + height){
+                navLinks.forEach(links =>{
+                    links.classList.remove('active');
+                    document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                })
+            }
+        })
+    }
+</script>
+
 
 </body>
 
