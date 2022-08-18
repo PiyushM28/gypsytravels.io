@@ -46,6 +46,7 @@ html {
 }
 
 section {
+    margin-top: 2.5rem;
     padding: 2rem 9%;
 }
 
@@ -113,6 +114,7 @@ header .navbar a {
     margin: 0.8rem;
 }
 
+header .navbar a.active,
 header .navbar a:hover {
     color: black;
     font-weight: bold;
