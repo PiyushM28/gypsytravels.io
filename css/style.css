@@ -100,7 +100,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, #0ebef3 0%, #33bc9c 100%);
+    background: black;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -109,14 +109,14 @@ header {
 }
 
 header .navbar a {
-    color: #fff;
+    color: var(--gradeblue);
     font-size: 2rem;
     margin: 0.8rem;
 }
 
 header .navbar a.active,
 header .navbar a:hover {
-    color: black;
+    color: var(--gradegreen);
     font-weight: bold;
 }
 
